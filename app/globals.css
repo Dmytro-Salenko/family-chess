@@ -34,3 +34,9 @@
 .chess-piece{width:94%;height:94%;filter:drop-shadow(0 1px 1px #0002)}
 .mated-king{background-image:radial-gradient(ellipse at 50% 48%,#ffcc6f 0%,#ff7659dc 25%,#ef533a88 53%,#e8513330 72%,transparent 85%)!important}
 .mate-label{background:#c73d2c;box-shadow:0 0 8px #ffba69b3,0 0 18px #ff785b80,0 2px 4px #0003}
+
+/* Reference palette: deeper green squares, soft ivory and generous silhouettes. */
+.square.dark{background:#789553}.square.light{background:#eeefd5}
+.square.dark small{color:#eff0da}.square.light small{color:#789553}
+.square.dark.last{background:#b5c841}.square.light.last{background:#cbd574}
+.chess-piece{width:94%;height:94%;filter:drop-shadow(0 1px .6px #0002)}
