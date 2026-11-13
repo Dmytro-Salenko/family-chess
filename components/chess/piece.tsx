@@ -1,15 +1,14 @@
-/** Original vector pieces, drawn on a shared 80 × 80 grid. */
+/** Clean, original vector silhouettes; shared geometry for both colours. */
 export function ChessPiece({type,color}:{type:string;color:string}) {
  const white=color==='w';
  return <svg className={`chess-piece ${white?'ivory-piece':'charcoal-piece'}`} viewBox="0 0 80 80" aria-hidden="true" focusable="false">
- <g fill={white?'#fafaf8':'#515150'} stroke={white?'#555552':'#292927'} strokeWidth="2.3" strokeLinejoin="round" strokeLinecap="round">
- {type==='p'&&<><path d="M29 39c1 9-1 15-7 21l-5 7h46l-5-7c-6-6-8-12-7-21z"/><circle cx="40" cy="24" r="12"/><path d="M27 38q13-5 26 0l-2 6H29z"/><path d="M17 67q23-5 46 0v5H17z"/></>}
- {type==='r'&&<><path d="M21 29h38l-6 10 2 22H25l2-22z"/><path d="M18 12h11v10h7V12h8v10h7V12h11l-3 19H21z"/><path d="M23 61q17-3 34 0l7 9v3H16v-3z"/><path d="M27 39h26M24 62h32" fill="none"/></>}
- {type==='n'&&<><path d="M22 62c-1-12 3-23 12-30l-9 4-8-7 10-10 4-9 11 5 8-5 1 10c16 11 19 24 10 42z"/><path d="M25 24l-8 5 8 7 9-4c1 8-6 13-8 22 15-2 22-10 24-18" fill="none"/><path d="M41 20l-4 6" fill="none" strokeWidth="3.5"/><path d="M48 23c12 11 13 24 7 35" fill="none" opacity=".35"/><path d="M22 62q19-4 39 0l5 9v2H17v-2z"/></>}
- {type==='b'&&<><path d="M29 45c1 7-2 13-7 18h36c-5-5-8-11-7-18z"/><path d="M40 13C30 22 23 30 25 36c2 8 28 8 30 0 2-6-5-14-15-23z"/><circle cx="40" cy="11" r="4"/><path d="M44 22l-8 13" fill="none" strokeWidth="3"/><path d="M27 44q13-4 26 0l-2 5H29z"/><path d="M21 63q19-3 38 0l7 8v2H14v-2z"/></>}
- {type==='q'&&<><path d="M19 27l10 29h22l10-29-15 13-6-21-6 21z"/><path d="M28 55q12-4 24 0l3 7H25z"/><path d="M24 62q16-3 32 0l8 9v2H16v-2z"/><circle cx="17" cy="24" r="5"/><circle cx="40" cy="15" r="5"/><circle cx="63" cy="24" r="5"/><path d="M28 43l4 9m20-9-4 9" fill="none" opacity=".45"/></>}
- {type==='k'&&<><path d="M36 7h8v7h7v7h-7v10h-8V21h-7v-7h7z"/><path d="M40 35c-7-18-27-10-22 5l11 17h22l11-17c5-15-15-23-22-5z"/><path d="M40 35v17" fill="none"/><path d="M27 55q13-4 26 0l3 8H24z"/><path d="M23 63q17-4 34 0l8 8v2H15v-2z"/></>}
+ <g fill={white?'#fafaf8':'#4b4b49'} stroke={white?'#575754':'#282827'} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round">
+ {type==='p'&&<><path d="M34 33c-6-2-8-6-8-11a14 14 0 0 1 28 0c0 5-2 9-8 11l5 6H29z"/><path d="M34 39c0 12-5 19-13 25-3 2-4 5-4 9h46c0-4-1-7-4-9-8-6-13-13-13-25"/></>}
+ {type==='r'&&<><path d="M19 12h10v10h7V12h8v10h7V12h10v19l-7 6v23l8 8v5H18v-5l8-8V37l-7-6z"/><path d="M26 37h28M26 60h28M19 68h42" fill="none"/></>}
+ {type==='n'&&<><path d="M22 63c2-10 7-18 16-26l-7 1-8 5-10-8c-1-1-1-3 0-4l15-14 4-9 8 6c18 0 30 16 27 34-1 6-4 11-6 15z"/><path d="M41 18c16 8 21 22 15 38" fill="none" stroke={white?'#d1d1ce':'#686865'} strokeWidth="4"/><path d="M32 24l4-3" fill="none" strokeWidth="3"/><path d="M21 63q20-3 40 0l5 9v2H16v-2z"/></>}
+ {type==='b'&&<><path d="M40 13c-8 9-16 19-15 28 1 5 7 8 10 8-1 7-5 12-11 16l-6 8h44l-6-8c-6-4-10-9-11-16 3 0 9-3 10-8 1-9-7-19-15-28z"/><circle cx="40" cy="10" r="4"/><path d="M44 23l-8 15M29 49h22M24 65h32" fill="none"/></>}
+ {type==='q'&&<><path d="M17 28l9 29-4 9-5 7h46l-5-7-4-9 9-29-15 14-8-22-8 22z"/><circle cx="16" cy="26" r="5"/><circle cx="40" cy="17" r="5"/><circle cx="64" cy="26" r="5"/><path d="M26 57q14-4 28 0M23 66q17-3 34 0" fill="none"/></>}
+ {type==='k'&&<><path d="M36 7h8v7h7v7h-7v10h-8V21h-7v-7h7z"/><path d="M40 36c-5-12-15-12-20-6-5 7 2 19 9 27l-5 9-7 7h46l-7-7-5-9c7-8 14-20 9-27-5-6-15-6-20 6z"/><path d="M40 36v16M29 57q11-3 22 0M24 66q16-3 32 0" fill="none"/></>}
  </g>
- <path d="M24 69h32" stroke={white?'#c4c4c0':'#747471'} strokeWidth="2" strokeLinecap="round" opacity=".7"/>
  </svg>
 }
