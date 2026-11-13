@@ -35,3 +35,5 @@ The included HTTPS host avoids a new domain purchase. An existing subdomain can 
 The GitHub repository contains source and schema only; no saved games, player keys, mailbox data or credentials.
 
 During a game the board fills the available screen height, with a narrow status and invitation panel on desktop and compact controls below the board on iPhone. Invitations open WhatsApp or the default mail composer; the player sends the message themselves.
+
+Board artwork uses original inline SVG pieces in `components/chess/piece.tsx`, with cream/green squares and lime last-move highlights. No external piece images or device-dependent chess fonts are required.
