@@ -7,10 +7,10 @@ Live: https://family-chess-salenko.umbergiraffe8.chatgpt.site
 ## Play
 
 1. Start a game (white).
-2. Send the invitation using **Invite your opponent**. The first person to accept gets black.
+2. Send the invitation using **WhatsApp** or **Почта**. The first person to accept gets black.
 3. Tap a piece and a highlighted destination. Games save automatically and sync every two seconds.
 
-Return in the same browser, or use **Save my player link** to continue on another device. Player links control that player's pieces: keep them private. Invitations are single-use. Clearing browser storage without keeping your player link loses access to your seat. On iPhone, use Safari → Share → Add to Home Screen.
+Return in the same browser, or bookmark the game page to keep your private player link. Player links control that player's pieces: keep them private. Invitations are single-use. Clearing browser storage without keeping your player link loses access to your seat. On iPhone, use Safari → Share → Add to Home Screen.
 
 Legal moves, castling, en passant, promotion choices, checkmate, stalemate, repetition and other draws are checked by chess.js on the server. Moves use optimistic concurrency so duplicate or simultaneous requests cannot overwrite a game. Keys are random and stored as SHA-256 digests. There are no public game listings, ads, analytics, or third-party chess services.
 
@@ -33,3 +33,5 @@ The local preview runs on port 5173. Hosted storage uses Cloudflare D1, provisio
 The included HTTPS host avoids a new domain purchase. An existing subdomain can be attached later if DNS access is available. The host's pricing and availability apply. There are no push notifications, chess clocks, spectator seats or account recovery. Polling resumes when the page is reopened. The public landing page is accessible to anyone; game records require an unguessable player key. This small family app has no dedicated anti-abuse/rate-limit service.
 
 The GitHub repository contains source and schema only; no saved games, player keys, mailbox data or credentials.
+
+During a game the board fills the available screen height, with a narrow status and invitation panel on desktop and compact controls below the board on iPhone. Invitations open WhatsApp or the default mail composer; the player sends the message themselves.
