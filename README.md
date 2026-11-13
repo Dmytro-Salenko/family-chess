@@ -37,3 +37,11 @@ The GitHub repository contains source and schema only; no saved games, player ke
 During a game the board fills the available screen height, with a narrow status and invitation panel on desktop and compact controls below the board on iPhone. Invitations open WhatsApp or the default mail composer; the player sends the message themselves.
 
 Board artwork uses original inline SVG pieces in `components/chess/piece.tsx`, with cream/green squares and lime last-move highlights. No external piece images or device-dependent chess fonts are required.
+
+## Family room
+
+The main button creates a private room for Папа and Ярослав. Share its one-use pairing invitation once via WhatsApp or email. Each browser retains a separate random room credential; the database stores only its SHA-256 digest. Once paired, open the site in the same browser to see presence and start or resume a shared game without another invitation. New family games and rematches are published to both devices automatically while the page is open. Keep browser data to retain access; bookmarks to individual games include the player's credential and must stay private.
+
+Presence is a foreground heartbeat every five seconds, considered online for twenty seconds after the last heartbeat. A suspended or closed phone page eventually appears offline; the site does not send background push notifications. Family room tables are provisioned by migration `drizzle/0001_clean_bucky.sql`.
+
+Checkmate displays a red «МАТ» badge above the losing king and a win/loss message in the game panel. The board remains visible at the end, with a rematch button. Run `node tests/family.mjs` against a migrated local preview (or set TEST_ORIGIN for a deployed test) to verify pairing, presence, simultaneous game creation, checkmate and invitation-free rematches.
